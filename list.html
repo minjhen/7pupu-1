@@ -1,6 +1,7 @@
 <html>
 
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
         crossorigin="anonymous">
     <style>
@@ -15,11 +16,6 @@
             left: 20px
         }
 
-        .burger {
-            position: absolute;
-            top: 25px;
-            right: 20px
-        }
 
         .search {
             position: absolute;
@@ -40,106 +36,186 @@
             width: 40px;
             height: 40px;
             border-radius: 50%;
-            background-color: #397a69
+            background-color: #397a69;
+            margin-right: 10px
         }
 
         .item2 {
             width: 40px;
             height: 40px;
             border-radius: 50%;
-            background-color: #cc8e24
+            background-color: #cc8e24;
+            margin-right: 10px
         }
 
         .item3 {
             width: 40px;
             height: 40px;
             border-radius: 50%;
-            background-color: #781c20
+            background-color: #781c20;
+            margin-right: 10px
         }
 
         .item4 {
             width: 40px;
             height: 40px;
             border-radius: 50%;
-            background-color: #397a69
+            background-color: #397a69;
+            margin-right: 10px
         }
 
         .pupu-card {
             max-width: 400px;
         }
-    </style>
 
+        a {
+            color: black;
+        }
+
+        a:hover {
+            color: grey;
+            text-decoration: none
+        }
+
+        .burger {
+            position: absolute;
+            top: 25px;
+            right: 20px
+        }
+
+        .flex-menu {
+            background-color: white;
+            display: flex;
+            justify-content: space-around;
+            transition: transfrom .5s linear;
+        }
+
+        .flex-menu.show {
+            transform: translateY(100px);
+        }
+
+        .flex-menu.hidden {
+            transform: translateY(-100px);
+        }
+
+        .pupu-btn {
+            background-color: #eeeeed !important;
+            border-color: #eeeeed !important;
+            box-shadow: 0 0 0 0 !important;
+        }
+
+        .pupu-drop-menu {
+            width: 100%;
+        }
+    </style>
 </head>
 
 <body>
     <!--灰底-->
-    <div style="background-color:#b5b6b6;width:100%;height:2556px">
+    <div style="background-color:#b5b6b6;width:100%">
         <!--header-->
         <div style="background-color:#eeeeed;width:100%;height:100px" class="header">
         </div>
         <img src="longlogo.png" class="logo" style="width:auto;height:60px">
         </img>
-        <img src="burger.png" class="burger" style="width:auto;height:60px">
+
+        <!--<div class="flex-menu">
+            <div>
+                <a class="dropdown-item" href="#">性別</a>
+            </div>
+            <div>
+                <a class="dropdown-item" href="#">教育</a>
+            </div>
+            <div>
+                <a class="dropdown-item" href="#">體育</a>
+            </div>
+            <div>
+                <a class="dropdown-item" href="#">藝文</a>
+            </div>
+        </div>
+    -->
+
+        <!-- 下拉式選單無法融入原本的漢堡圖像 -->
+        <div class="burger">
+            <a class="btn btn-secondary pupu-btn" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="false">
+                <img src="burger.png" style="width:auto;height:60px">
+            </a>
+
+            <div class="dropdown-menu pupu-drop-menu" aria-labelledby="dropdownMenuLink">
+                <a class="dropdown-item" href="#">性別</a>
+                <a class="dropdown-item" href="#">教育</a>
+                <a class="dropdown-item" href="#">體育</a>
+                <a class="dropdown-item" href="#">藝文</a>
+            </div>
+        </div>
+
+        <!--如何讓搜尋鍵拉出空格-->
         <img src="search.png" class="search" style="width:auto;height:60px">
 
 
-        <!--cover problem:底色無法變淺灰-->
-        <div style="background-color:#eeeeed;width:887px;margin:55px auto">
-            <div class="card-deck">
+        <!--cover-->
+      
+        <div style="background-color:#eeeeed;width:887px;height:2230px;margin:55px auto">
+            <div style="font-family:Noto Sans TC;font-size:48px;text-align:center">多媒體專題</div>
+            <div class="card-deck" style="width:95%;margin:0 auto">
                 <div class="card">
                     <img class="card-img-top" src="cover.png" alt="Card image cap">
                     <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This
-                            content is a little bit longer.</p>
+
                         <p class="card-text">
-                            <small class="text-muted">Last updated 3 mins ago</small>
+                            <a href="https://www.facebook.com/">【專題記者劉祐齊、周瑩慈、陳詩妤、陳亭蓉、曾智怡報導】打開電視、翻開報紙，酒駕肇事的新聞幾乎天天上演。根據內政部警政署的資料顯示，民國104年酒駕共造成8262人死傷，平均一天就有22.6人因為酒駕受傷或死亡。要如何阻止憾事發生？加重刑責，真的能有效杜絕憾事的發生嗎？（......詳全文）</a>
                         </p>
+
                     </div>
                 </div>
+
+
+
+
+
             </div>
-            <!--大家的文章-->
+        <!--大家的文章-->
+    
             <div style="background-color:#eeeeed;width:887px;margin:29px auto">
-                <span style="font-family:Noto Sans TC;font-size:48px;text-align:center">團隊成員作品</span>
+                <div style="font-family:Noto Sans TC;font-size:48px;text-align:center">團隊成員作品</div>
 
-                <div class="card-deck" >
+                <div class="card-deck" style="margin:30px auto">
 
-                    <div class="card pupu-card">
+                    <div class="card pupu-card" style="margin-left:28px">
                         <img class="card-img-top" src="pic1.jpg" alt="Card image cap">
                         <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.
-                                This content is a little bit longer.</p>
+
                             <p class="card-text">
-                                <small class="text-muted">Last updated 3 mins ago</small>
+                                <a href="https://www.facebook.com/">【記者王若璞台北報導】「你們手上的車票是到終點站的，絕對不可以中途下車！」葉永鋕母親的紀錄片投影在螢幕上，讓雨中堅守不肯離去的支持者紅了眼眶。（......詳全文）</a>
                             </p>
+
                         </div>
                     </div>
 
                     <div class="card pupu-card">
                         <img class="card-img-top" src="pic2.png" alt="Card image cap">
                         <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+
                             <p class="card-text">
-                                <small class="text-muted">Last updated 3 mins ago</small>
+                                <a href="https://www.facebook.com/">【專題記者周瑩慈、陳亭蓉、劉祐齊、曾智怡、陳詩妤綜合報導】大部份人小學生活的記憶，是按照課表上課，午覺睡醒後再繼續上課，放學回家或去安親班等待爸媽。（......詳全文）</a>
                             </p>
+
                         </div>
                     </div>
                 </div>
 
 
 
-                <div class="card-deck">
-                    <div class="card pupu-card">
+                <div class="card-deck" style="margin:50px auto">
+                    <div class="card pupu-card" style="margin-left:28px">
                         <img class="card-img-top" src="pic3.png" alt="Card image cap">
                         <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This
-                                card has even longer content than the first to show that equal height action.</p>
+
                             <p class="card-text">
-                                <small class="text-muted">Last updated 3 mins ago</small>
+                                <a href="https://www.facebook.com/">【記者陳詩妤台東報導】「2016台灣國際衝浪公開賽」11月23至27日盛大舉辦，各地選手皆對台東浪頭表示驚艷。台灣擁有良好衝浪場地，然而選手並不多且年齡層偏高（......詳全文）</a>
                             </p>
+
                         </div>
                     </div>
 
@@ -148,12 +224,11 @@
                     <div class="card pupu-card">
                         <img class="card-img-top" src="pic4.jpg" alt="Card image cap">
                         <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This
-                                card has even longer content than the first to show that equal height action.</p>
+
                             <p class="card-text">
-                                <small class="text-muted">Last updated 3 mins ago</small>
+                                <a href="https://www.facebook.com/">【記者翁芊儒新竹報導】一團團變異腫瘤散佈在白色的牆面上，寫實擬真的外型乍看下就似子宮內血淋淋的胚胎。國立清華大學藝術教育與創作研究所學生鄭迺蓁（......詳全文）</a>
                             </p>
+
                         </div>
                     </div>
                 </div>
@@ -162,53 +237,53 @@
 
 
 
-                <div class="card-deck"></div>
-                    <div class="card pupu-card">
-                        <img class="card-img-top" src="pic5.jpg" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This
-                                card has even longer content than the first to show that equal height action.</p>
-                            <p class="card-text">
-                                <small class="text-muted">Last updated 3 mins ago</small>
-                            </p>
-                        </div>
+                <div class="card-deck" style="margin:0 auto"></div>
+                <div class="card pupu-card" style="margin-left:28px">
+                    <img class="card-img-top" src="pic5.jpg" alt="Card image cap">
+                    <div class="card-body">
+
+                        <p class="card-text">
+                            <a href="https://www.facebook.com/">【記者楊旻蓁高雄報導】「我不追求美麗或靜止狀態的景觀，而是怎麼將不安、不舒適感用作品呈現出來。」倫敦大學金匠學院（Goldsmiths, University of London）影像與（......詳全文）</a>
+                        </p>
+
                     </div>
                 </div>
-
-
             </div>
-
-            <div style="background-color:#eeeeed;width:100%;height:131px " class="flex-container">
-                <div>
-                    <div class="item1" style="display:inline-block"></div>
-                    <div style="display:inline-block ">關於我們</div>
-                </div>
-                <div>
-                    <div class="item2" style="float:left;margin-right:10px"></div>
-                    <div style="float:left">聯絡我們</div>
-                </div>
-                <div>
-                    <div class="item3" style="float:left;margin-right:10px"></div>
-                    <div style="float:left">多媒體專題</div>
-                </div>
-                <div>
-                    <div class="item4" style="float:left;margin-right:10px"></div>
-                    <div style="float:left">個人作品</div>
-                </div>
-            </div>
+       
 
 
+    </div>
+
+    <div style="background-color:#eeeeed;width:100%;height:131px " class="flex-container">
+        <div style="display:flex;align-items:center">
+            <div class="item1"></div>
+            <div >關於我們</div>
+        </div>
+        <div>
+            <div class="item2" style="display:inline-block;vertical-align:middle"></div>
+            <div style="display:inline-block;align-items:center">聯絡我們</div>
+        </div>
+        <div>
+            <div class="item3" style="display:inline-block;vertical-align:middle"></div>
+            <div style="display:inline-block;align-items:center">多媒體專題</div>
+        </div>
+        <div>
+            <div class="item4" style="display:inline-block;vertical-align:middle"></div>
+            <div style="display:inline-block;align-items:center">個人作品</div>
+        </div>
+    </div>
 
 
 
-            <!--js-->
-            <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-                crossorigin="anonymous"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-                crossorigin="anonymous"></script>
-            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-                crossorigin="anonymous"></script>
+
+
+    <!--js-->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
 
 
 
