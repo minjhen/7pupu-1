@@ -1,0 +1,622 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css" />
+    <style>
+        * {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "PingFang TC", "Microsoft JhengHei", "Noto Sans TC", "Apple LiGothic Medium", Roboto, "Lucida Grande", "Lucida Sans Unicode", sans-serif;
+            background-color: #e1ba74;
+            font-weight: normal;
+        }
+
+
+
+        a {
+            color: #2d2d2d;
+            text-decoration: none;
+            border-bottom: 1px solid #c06b0e;
+        }
+
+        header {
+            max-width: calc(270/320*100%);
+            margin: 0 auto;
+            background-color: #e1ba74;
+            
+
+        }
+
+        header>table {
+            width: 100%;
+
+        }
+/*記得填要什麼*/
+@media screen and (max-width: 768px){
+
+}
+
+        @media screen and (min-width: 768px) and (max-width: 1023px) {
+            header {
+                width: 678px;
+            }
+
+            article {
+                max-width: 678px;
+                margin: 0 auto;
+            }
+        }
+
+        @media screen and (min-width: 1024px) {
+            header {
+                width: 900px;
+            }
+
+            article {
+                max-width: 900px;
+                margin: 0 auto;
+            }
+        }
+
+
+        article {
+            color: #2d2d2d;
+        }
+
+        article>figure {
+            margin: 40px 0 0 0;
+        }
+
+        @media screen and (min-width: 768px) and (max-width: 1023px) {
+            article>figure {
+                width: 678px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .float-right {
+                float: left;
+                width: 300px;
+                margin-top: 40px;
+                margin-right: 40px;
+                margin-bottom: 50px;
+            }
+        }
+
+        @media screen and (min-width: 1024px) {
+            article>figure {
+                width: 900px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .float-right {
+                float: right;
+                width: 360px;
+                margin-top: 40px;
+                margin-left: 40px;
+                margin-bottom: 50px;
+            }
+        }
+
+        article>p,
+        article>h2,
+        article>blockquote,
+        article>ul,
+        article figcaption,
+        article>div {
+            max-width: calc(270/320*100%);
+            margin: 0 auto;
+        }
+
+        @media screen and (min-width: 768px) and (max-width: 1023px) {
+            article>p,
+            article>h2,
+            article>blockquote,
+            article>ul,
+            article figcaption,
+            article>div,
+            article>header,
+            article>ul {
+                width: 550px;
+            }
+        }
+
+        @media screen and (min-width: 1024px) {
+            article>p,
+            article>h2,
+            article>blockquote,
+            article>ul,
+            article figcaption,
+            article>div,
+            article>header {
+                max-width: 756px;
+            }
+            article>ul {
+                width: 700px;
+            }
+        }
+
+        article>ul {
+            width: 100%;
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+
+
+        article>p,
+        article>blockquote {
+            font-size: 18px;
+            line-height: 2.0;
+            letter-spacing: 0.9px;
+            margin-top: 40px;
+        }
+
+        article>blockquote {
+            padding-left: 21px;
+            color: #6d6d6d;
+            border-left: 1px solid #6d6d6d;
+        }
+
+        article>h2 {
+            font-size: 22px;
+            font-weight: bold;
+            letter-spacing: 1.1px;
+            line-height: 1.64;
+            margin-top: 40px;
+        }
+
+        article figcaption {
+            font-size: 16px;
+            line-height: 1.5;
+            letter-spacing: 0.8px;
+            color: #b07a1a;
+            margin-top: 15px;
+        }
+
+        .header {
+            margin-top: 17px;
+            margin-bottom: 17px;
+        }
+
+        .logo {
+            width: 60px;
+            height: 40px
+        }
+
+        .menu {
+            width: 31px;
+            height: 31px;
+        }
+
+        .author {
+            font-size: 15px;
+            line-height: 2.25;
+        }
+
+        .introduction {
+            font-size: 22px;
+            line-height: 1.82;
+            letter-spacing: 1.6px;
+            text-align: justify;
+            margin-top: 30px;
+        }
+
+        .related-text {
+            font-size: 16px;
+            line-height: 2.25;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .related-items {
+            margin-bottom: 60px;
+        }
+
+        .related-item {
+            background-color: #d19856;
+            margin-top: 20px;
+            padding: 20px;
+            cursor: pointer;
+        }
+
+        .related-item>img {
+            width: 20%;
+            vertical-align: middle;
+        }
+
+        .related-item>div {
+            display: inline-block;
+            width: 70%;
+            padding-left: 20px;
+            vertical-align: middle;
+            line-height: 1.5;
+        }
+
+        /* footer style */
+
+        .footer-background {
+            position: relative;
+            background-color: #44642a;
+            width: 100%;
+            height: 300px
+        }
+
+        .surprise-position {
+            position: absolute;
+            left: 360px;
+            top: 50px;
+            max-width: 10px;
+
+        }
+
+        .contact-me {
+            position: absolute;
+            left: 390px;
+            top: 63px;
+
+        }
+
+        .q-position {
+            position: absolute;
+            left: 352px;
+            top: 150px;
+            max-width: 25px;
+        }
+
+        .about-me {
+            position: absolute;
+            left: 390px;
+            top: 163px;
+
+        }
+
+
+        .footer-line-position {
+            position: absolute;
+            left: 620px;
+            top: 50px;
+            max-width: 10px;
+            margin: 0 auto
+        }
+
+        .fb-position {
+            position: absolute;
+            left: 810px;
+            top: 52px;
+            max-width: 50px;
+        }
+
+        .fb {
+            position: absolute;
+            left: 880px;
+            top: 67px;
+
+        }
+
+
+
+
+        .ig-position {
+            position: absolute;
+            left: 810px;
+            top: 152px;
+            max-width: 50px;
+        }
+
+        .ig {
+            position: absolute;
+            left: 880px;
+            top: 167px;
+
+        }
+
+
+
+
+
+
+
+        /* 原本的footer
+        footer {
+            background-color: #bfbfbf;
+            min-height: 300px;
+        }
+
+        footer>table {
+            border-spacing: 45px;
+            width: 100%;
+        }
+
+        .footer-circle1 {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background-color: #397a69;
+            margin: 0 auto;
+        }
+
+        .footer-circle2 {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background-color: #cc8e24;
+            margin: 0 auto;
+        }
+
+        .footer-circle3 {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background-color: #781c20;
+            margin: 0 auto;
+        }
+
+        .footer-text {
+            margin-top: 15px;
+            font-size: 18px;
+            text-align: center;
+            color: #777;
+        }
+
+        .embed-box {
+            position: relative;
+            margin-top: 60px;
+        }
+
+        .embed-box>iframe {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+
+
+        @media screen and (max-width: 767px) {
+            table.hidden-on-mobile {
+                display: none;
+            }
+
+            table.shown-on-mobile {
+                display: table;
+            }
+        }
+
+        @media screen and (min-width: 768px) {
+            table.hidden-on-mobile {
+                display: table;
+                max-width: 770px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            table.shown-on-mobile {
+                display: none;
+            }
+        }
+
+        .flex-footer {
+            display: flex;
+            justify-content: space-between;
+        }
+        */
+    </style>
+
+</head>
+
+<body>
+    <header class="header">
+        <table>
+            <tbody>
+                <tr>
+                    <td>
+                        <div class="logo">
+                            <img src="7pupu.png" alt="logo7pupu" class="logo" />
+                        </div>
+                    </td>
+                    <td style="width:22px">
+                        <div class="menu">
+                            <img src="burger.png" alt="selection" class="menu" />
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </header>
+
+    <div style="background-color:#e1ba74">
+
+
+        <img src="title1.png" style="display:block;margin:50px auto;width:40%"></img>
+        <img src="title2.png" style="display:block;margin-top:-50px;margin-left:auto;margin-right:auto; width:55%"></img>
+
+        <article>
+            <!--
+        <header>
+		<h1 style="padding-top:40px">下一場教育大革命？公辦公營實驗教育轉型之路</h1>
+        </header>
+        -->
+            <div style="margin-top:50px;margin-bottom:15px">
+
+
+                <span class="author" style="font-weight: bold;">文／</span><a>周瑩慈、陳亭蓉、劉祐齊、曾智怡、陳詩妤綜合報導</a>
+
+            </div>
+
+            <div>
+                <img src="flag.png" alt="leading image of this article" width="100%" />
+            </div>
+            <p>
+                大部份人小學生活的記憶，是按照課表上課，午覺睡醒後再繼續上課，放學回家或去安親班等待爸媽。台中市太平區東汴國民小學學生的記憶卻不是如此，因為早上的地理課學到河的生態，下午就到山林把課本中的文字變成眼前流動的河水、躲藏在石頭縫隙間的蝦蟹及小魚。這種「固本」與「體驗」同時兼顧的學習模式，在普通學生心中是難得放鬆的「校外教學」，但對實驗學校的學生而言，就是日常學習的一部分。
+            </p>
+            <p>
+                教育部於民國105年年底、「實驗教育三法」（*註1）通過後的第二年提出修正草案，希望放寬同一教育階段內公立實驗學校佔總學校數比率，從10％提高至33％。隨著公辦公營實驗學校的數目增長，實驗學校漸漸成為越來越多家長的選擇，但也因此被質疑是否只是一時熱潮。全國教師工會總聯合會也曾公開質疑（*註2），教育部放寬實驗教育辦學學校總量上限，恐使實驗教育步上高教災難的後塵。
+            </p>
+
+            <p>
+                全國教師工會總聯合會專業發展中心副執行長、新北市立中和國民中學教師殷童娟表示，全教總支持實驗教育的精神，但在沒有推出任何的分析、研究說明辦學的情況下，大幅提升公辦公營實驗教育學校的比例，過於倉促並不利於實驗教育整體的發展。
+            </p>
+
+            <p>
+                103年底「實驗教育三法」的通過，為公立學校帶來轉型實驗教育的空間與正當性，更讓實驗教育普及於一般大眾，同時賦予學生多元學習的機會，及保障了家長的教育選擇權。通過後，由公立中小學轉型而成的公辦公營實驗中小學便紛紛掛牌開辦，包含106學年開始招生的學校，公辦公營實驗學校迄今共41所。
+            </p>
+
+            <p>
+                今年九月份即將開始招生的台北市和平實驗國民小學，是台北市的第一所公辦公營實驗小學。嘗試以主題式課程，突破過往分科教學的框架，成為家長心目中的明星學校。為何實驗教育三法通過兩年後，台北市才邁出第一步？「比較好的籌劃，一步一步站穩了，才可以往前走。」和平實小校長黃志順表示，轉型過程面臨的困難很多，兩年來在做充實準備。
+            </p>
+
+            <div style="width:100%">
+                <div style="margin-top:40px">
+                    <img src="taiwan.png" alt="實驗教育公辦公營小學全台分布圖" width="100%" />
+                </div>
+                <figcaption>資料來源：親子天下（統計至2017年1月6日） 製表：陳亭蓉
+                </figcaption>
+            </div>
+            <h2>
+                公辦公營起步難 凝聚共識為首要
+            </h2>
+            <p>
+                實驗教育批判現行教育體制的問題，重視學生自我認識、自主學習的能力。教學的設計以孩子本身為核心，力求完整課程規劃，讓孩子在成長的過程中充分受尊重。每間實驗學校都有一套自己的課程規劃，並不侷限於現行的體制框架中。公辦公營實驗學校皆是從現有公立學校轉型而成。作為改革的先鋒，無前例可循，在執行過程中有許多困難需要克服，首要之務為凝聚各方共識。
+            </p>
+            <p>
+                目前幾所將轉型的實驗學校正歷經一段摸索期，針對公辦公營的實驗學校，東汴國小校長朱秀麗指出，教育主管單位要全力地做學校人力或財力上的後盾。「因為縣市政府會指定學校轉型，但是沒給出具體的方向，學校會無所適從。」正在轉型中的實驗教育學校必須知道教學目的為何，且需具備足夠人力從事這類教學，一切都需要時間醞釀。
+            </p>
+            <p>
+                現況顯示政府支持，但未給應有的支持系統。例如地方政府指名要求學校轉型為實驗學校，卻沒給轉型需要的師資培訓、教材編寫的準備時間，容易導致老師心有餘而力不足。舉例來說，東汴國小因位於偏鄉，相對都市而言孩子較少，隨著轉型為實驗學校而併班開始混齡教學。然而混齡教學需要準備很多額外的教學方案，老師備課的工作無形中增加不少。公辦公營學校不同於私校的是，老師須同時兼顧行政工作和備課，負擔沈重。「假如這些行政事務有別的解決方式，就能讓老師更專注在教學上，也不會那麼累，不然我們家長看了都很捨不得。」東汴國小家長會會長陳品妙表示，師資缺乏、行政事務耗磨了老師備課的不少心力。
+            </p>
+            <p>
+                參與創辦多所實驗學校、國立政治大學教育學系副教授鄭同僚也指出，因為對先前幾次教改感到失望，導致部分老師對這波實驗教育改革態度較為保守。另外，領同樣薪水卻要付出更多的時間與心力，長期下來，容易漸漸磨滅老師的熱情。於是當老師對實驗教育信心不足，再加上學校未做好準備就急於轉型，將造成家長對體制不信任，這個力求改變的學習環境就只能走向回頭路。他建議各縣市政府教育局授權給校長，將不願意參加實驗教育的老師優先借聘出去，進而凝聚校內老師的共識。
+            </p>
+            <p>
+                學校、老師和家長三方的溝通也是一大挑戰。作為全台第一間原住民實驗小學，台中市博屋瑪國民小學在轉型前兩、三年便不斷與社區和校內老師進行溝通，「你要把學校想法很清楚、具體地告訴老師與家長。」博屋瑪國小教務主任林志宏認為急就章不利於長遠發展，而各方支持也是轉型成功與否的要因。舉例而言，並非所有縣市都有足夠資金成立相關教育中心（例如屏東縣原住民族課程發展中心），實驗課程需依賴學校老師產出，若無共識，推動起來將困難重重。
+            </p>
+
+            <div style="margin-top:40px">
+                <img src="riverbank.png" alt="實驗小學戶外課程" width="100%" />
+                <figcaption>由於地緣優勢，東汴國小學生親自向別校學生解說生態知識，小朋友們正在觀察拉氏清溪蟹。圖／東汴國小提供</figcaption>
+            </div>
+            <p>
+                和平實驗國民小學校長黃志順表示，「家長是關鍵」。家長是否能理解學校的想法以及預期的做法，會影響到他們是否參與及支持學校之後的安排。為了確認家長清楚校方的作為與規劃，後續能建立親師之間的合作，和平國小舉辦多次說明會，入學時也安排校方跟家長有深入面談的機會。
+
+
+            </p>
+            <p>
+                此外，還有銜接問題。目前實驗教育仍非主流，有些家長擔心孩子在畢業後升學至一般學校時課業的銜接及環境適應，黃志順對此表示，一方面107學年度附近會有兩所實驗教育國中成立，可以直接銜接；另一方面，培養適應力才是學習過程中最重要的，「其實我覺得孩子的教育最重要的不是去幫他鋪後面的路，而是讓他在學習歷程中長得夠強壯。」而目前大學已有特殊選材管道，例如國立清華大學的拾穗計畫，只要有高中同等學歷證明，學生便可以自身特殊才能申請進入學校。以106學年度清大特殊選才為例，錄取率低於5%的正取生中，有一成是接受實驗教育的學生。
+            </p>
+            <div style="width:100%">
+                <div style="margin-top:40px">
+                    <img src="taiya.png" alt="實驗小學文化課程" width="100%" />
+                </div>
+                <figcaption>博屋瑪國小是全台第一所原住民實驗小學，課程中有三分之一為泰雅文化課，例如教導學生吹奏泰雅族傳統樂器口簧琴。圖／博屋瑪國小提供
+                </figcaption>
+            </div>
+            <h2>
+                實驗教育應步步踏實 引領傳統教育走出新篇章
+            </h2>
+
+
+            <p>
+                有家長擔憂參與實驗教育的孩子成為白老鼠，「我認為現行教育體制其實才是最大的實驗教育。因為從工業革命以來，人們把孩子送到學校，一個人站在前面演講給所有人聽的這種教學方式從來沒改變過。已經進入數位化的時代，這樣的教學才是最可怕的實驗教育。」鄭同僚以這段言論打破既有印象，也讓家長反思主流教育制度的問題所在。然而他也提到，實驗教育的缺點就是高度的不確定性，沒有人知道在實驗教育下，孩子的成長會被形塑成什麼面貌。
+
+
+            </p>
+            <p>
+                雖然實驗教育是對現有體制的一種衝擊，兩者卻並非對立。實驗教育更應該是先驅，帶領台灣教育制度變得更成熟。前教育部國民及學前教育署署長、台北市立大學教授吳清山表示，「實驗教育在未來是必走的一條路，可以給孩子多元學習的機會。」公辦公營實驗教育可以刺激公立學校的品質提升，形成良性競爭。目前雖然還沒完全穩定下來，所以初期階段應該要採取循序漸進的方式，建議提高到20％。縱觀而言，轉型的過程並非一蹴可幾，需要各方支持、完善規劃課程的時間及心力，才能作出周全的課程設計。
+            </p>
+            <p>
+                「家長是否準備好陪孩子成長」更是相當重要，而非把孩子送到學校就沒有責任了，家長應適時關心孩子的學習狀況。畢竟，再完善的教育環境，若沒有家長的支持，也很難有好結果。真心尊重的陪伴，相信每個孩子都會有無限的可能。
+            </p>
+            <p>
+                從「政府與學校的溝通」到「親師生三方的共識」，每個環節都考驗著參與在其中的人，實驗教育不只需要關注及讚揚，更需要檢討及改進。如此一來，實驗教育才可能成為教育制度的領頭羊，開創台灣教育的新篇章。
+            </p>
+
+            <!--為何字體不會變粗，是因為最上面body的設定嗎-->
+            <div class="related-text" style="margin-top:40px;margin-bottom:20px;font-weight:900">延伸閱讀</div>
+
+            <ul class="related-items" style="padding-bottom:40px">
+                <li class="related-item">
+                    <img src="DWI.png"></img>
+                    <div>延伸閱讀一：治酒駕用重典？預防勝處罰</div>
+                </li>
+                <li class="related-item">
+                    <img src="book.jpg"></img>
+                    <div>延伸閱讀二：買書還是借書？公共借閱權守護本土創作出版</div>
+                </li>
+            </ul>
+
+        </article>
+        <div class="footer-background">
+
+            <img src="！.png" class="surprise-position"></img>
+            <div style="display:inline-block;color:white" class="contact-me">聯絡我</div>
+
+
+            <img src="？.png" class="q-position"></img>
+            <div style="display:inline-block;color:white" class="about-me">關於我</div>
+
+            <img src="footer-line.png" class="footer-line-position"></img>
+            <img src="fb-pic.png" class="fb-position"></img>
+            <div style="display:inline-block;color:white" class="fb">facebook</div>
+            <img src="ig-pic.png" class="ig-position"></img>
+            <div style="display:inline-block;color:white" class="ig">instagram</div>
+        </div>
+
+        <!--
+    </div>
+    <footer style="background-color:#eeeeed">
+        <table class="shown-on-mobile">
+            <tbody>
+                <tr>
+                    <td>
+                        <div class="footer-circle1"></div>
+                        <div class="footer-text">關於我們</div>
+                    </td>
+                    <td>
+                        <div class="footer-circle2"></div>
+                        <div class="footer-text">聯絡我們</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="footer-circle3"></div>
+                        <div class="footer-text">多媒體專題</div>
+                    </td>
+                    <td>
+                        <div class="footer-circle1"></div>
+                        <div class="footer-text">個人作品</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="hidden-on-mobile">
+            <tbody>
+                <tr>
+                    <td>
+                        <div class="footer-circle1"></div>
+                        <div class="footer-text">關於我們</div>
+                    </td>
+                    <td>
+                        <div class="footer-circle2"></div>
+                        <div class="footer-text">聯絡我們</div>
+                    </td>
+                    <td>
+                        <div class="footer-circle3"></div>
+                        <div class="footer-text">多媒體專題</div>
+                    </td>
+                    <td>
+                        <div class="footer-circle1"></div>
+                        <div class="footer-text">個人作品</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </footer>
+    -->
+</body>
+
+</html>
