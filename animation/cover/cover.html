@@ -1,0 +1,141 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--記得改數字-->
+    <link rel="stylesheet" type="text/css" href="animate.css"></link>
+    <style>
+        .road1-position {
+            position: relative
+        }
+
+        .car1-position {
+            position: absolute;
+            top: 400px;
+            left: 325px
+        }
+
+        .road2-02-position {
+            position: absolute;
+            top: -25px;
+            left: 28px;
+            opacity: 0.5;
+        }
+
+        .car2-position {
+            position: absolute;
+            top: 280px;
+            left: 200px;
+            width: 900px
+        }
+
+        .fire-position {
+            position: absolute;
+            top: 50px;
+            left: 100px;
+            width: 700px
+        }
+
+        .title-position {
+            position: absolute;
+            top: 200px;
+            left: 115px;
+            width: 800px
+        }
+
+        @keyframes car-crash {
+
+            0% {
+                transform: scale(1) translateY(0px);
+            }
+
+            25% {
+                transform: scale(1.1) translate(-5%, 20%);
+            }
+
+            50% {
+                transform: scale(1.25) translate(5%, 40%);
+            }
+            75% {
+                transform: scale(1.5) translate(-5%, 60%);
+            }
+            100% {
+                transform: scale(1.75) translateY(80%);
+            }
+        }
+
+        .car-animation {
+            animation-name: car-crash;
+            animation-duration: 1s;
+            animation-timing-function: linear;
+            animation-fill-mode: both;
+        }
+
+        @keyframes bg-flash {
+            0% {
+                opacity: 1;
+            }
+            10% {
+                opacity: 0;
+            }
+            20% {
+                opacity: 1;
+            }
+            30% {
+                opacity: 0;
+            }
+            40% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0;
+            }
+            60% {
+                opacity: 1;
+            }
+            70% {
+                opacity: 0;
+            }
+            80% {
+                opacity: 1;
+            }
+            100% {
+                opacity: .5;
+            }
+        }
+
+        .bg-flash {
+            animation-name: bg-flash;
+            animation-duration: 3s;
+            animation-fill-mode: both;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="animated fadeOut">
+        <img src="road1.png" class="road1-position"></img>
+
+        <!--如何把兩個動畫效果結合-->
+        <img src="car1.png" class="car1-position car-animation"></img>
+
+    </div>
+    <!-- 如何讓背景出來之後又淡掉（也是結合兩個動畫，但動畫時間不一樣）-->
+    <div class="animated fadeIn">
+        <img src="road2-02.png" class="road2-02-position"></img>
+        <!--如何重複用zoom in，但擁有不同細節效果 -->
+        <img src="fire.png" class="fire-position bg-flash"></img>
+        <img src="car2.png" class="car2-position"></img>
+
+    </div>
+    <img src="title2.png" class="title-position animated fadeIn jackInTheBox"></img>
+
+
+
+
+
+</body>
+
+</html>
