@@ -50,6 +50,11 @@
                 max-width: 360px;
                 margin: 0 auto;
             }
+
+            .title {
+                width: 100%;
+                margin: 0 auto
+            }
         }
 
 
@@ -350,98 +355,89 @@
 
         }
 
-/*footer的響應式（平板和桌機）還沒做完 */
-@media screen and (max-width: 768px) {
-    .footer-background {
-            position: relative;
-            height: 135px
-        }
-    
-    .surprise-position {
-            position: absolute;
-            left: 50px;
-            top: 35px;
-            width:5px
+        /*footer的響應式（平板和桌機）還沒做完 */
 
-        }
+        @media screen and (max-width: 768px) {
+            .footer-background {
+                position: relative;
+                height: 135px
+            }
 
-        .contact-me {
-            position: absolute;
-            left: 70px;
-            top: 40px;
-            font-size:10px
+            .surprise-position {
+                position: absolute;
+                left: 50px;
+                top: 35px;
+                width: 5px
+            }
 
-        }
+            .contact-me {
+                position: absolute;
+                left: 70px;
+                top: 40px;
+                font-size: 10px
+            }
 
-        .q-position {
-            position: absolute;
-            left: 47px;
-            top: 75px;
-            width:15px
-        }
+            .q-position {
+                position: absolute;
+                left: 47px;
+                top: 75px;
+                width: 15px
+            }
 
-        .about-me {
-            position: absolute;
-            left: 70px;
-            top: 80px;
-            font-size:10px
-
-        }
+            .about-me {
+                position: absolute;
+                left: 70px;
+                top: 80px;
+                font-size: 10px
+            }
 
 
-        .footer-line-position {
-            position: absolute;
-            left: 185px;
-            top: 25px;
-            height:84px
-           
-        }
+            .footer-line-position {
+                position: absolute;
+                left: 185px;
+                top: 25px;
+                height: 84px
+            }
 
-        .fb-position {
-            position: absolute;
-            left: 235px;
-            top: 35px;
-            width:33px;
-           
-        }
+            .fb-position {
+                position: absolute;
+                left: 235px;
+                top: 35px;
+                width: 33px;
 
-        .fb {
-            position: absolute;
-            left: 280px;
-            top: 44px;
-            font-size:10px
+            }
 
-        }
+            .fb {
+                position: absolute;
+                left: 280px;
+                top: 44px;
+                font-size: 10px
+            }
 
 
 
 
-        .ig-position {
-            position: absolute;
-            left: 235px;
-            top: 73px;
-            width:33px
-           
-        }
+            .ig-position {
+                position: absolute;
+                left: 235px;
+                top: 73px;
+                width: 33px
+            }
 
-        .ig {
-            position: absolute;
-            left: 280px;
-            top: 83px;
-            font-size:10px
-        }
+            .ig {
+                position: absolute;
+                left: 280px;
+                top: 83px;
+                font-size: 10px
+            }
 
-            
+
         }
 
 
-        @media screen and (min-width: 768px) and (max-width: 1023px) {
-            
-        }
+        @media screen and (min-width: 768px) and (max-width: 1023px) {}
 
-        @media screen and (min-width: 1024px) {
-            
-        }
+        @media screen and (min-width: 1024px) {}
 
 
 
@@ -556,10 +552,10 @@
 
     <div style="background-color:#e1ba74">
 
-
-        <img src="title1.png" style="display:block;margin:50px auto;width:40%"></img>
-        <img src="title2.png" style="display:block;margin-top:-50px;margin-left:auto;margin-right:auto; width:55%"></img>
-
+        <div class=title>
+            <img src="title1.png" style="display:block;margin:50px auto;width:40%"></img>
+            <img src="title2.png" style="display:block;margin-top:-50px;margin-left:auto;margin-right:auto; width:55%"></img>
+        </div>
         <article>
             <!--
         <header>
@@ -665,7 +661,7 @@
                 從「政府與學校的溝通」到「親師生三方的共識」，每個環節都考驗著參與在其中的人，實驗教育不只需要關注及讚揚，更需要檢討及改進。如此一來，實驗教育才可能成為教育制度的領頭羊，開創台灣教育的新篇章。
             </p>
 
-           
+
             <div class="related-text" style="margin-top:40px;margin-bottom:20px;font-weight:900">延伸閱讀</div>
 
             <ul class="related-items" style="padding-bottom:40px">
