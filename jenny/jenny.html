@@ -18,28 +18,40 @@
 
 
 
+
+
+        header {
+            max-width: calc(270/320*100%);
+            margin: 0 auto;
+
+
+
+        }
+
+        header>table {
+            width: 100%;
+            background-color: #e1ba74;
+        }
+
         a {
             color: #2d2d2d;
             text-decoration: none;
             border-bottom: 1px solid #c06b0e;
         }
 
-        header {
-            max-width: calc(270/320*100%);
-            margin: 0 auto;
-            background-color: #e1ba74;
-            
+        /*記得填要什麼*/
 
+        @media screen and (max-width: 768px) {
+            header {
+                width: 360px;
+            }
+
+            article {
+                max-width: 360px;
+                margin: 0 auto;
+            }
         }
 
-        header>table {
-            width: 100%;
-
-        }
-/*記得填要什麼*/
-@media screen and (max-width: 768px){
-
-}
 
         @media screen and (min-width: 768px) and (max-width: 1023px) {
             header {
@@ -68,8 +80,28 @@
             color: #2d2d2d;
         }
 
+
         article>figure {
             margin: 40px 0 0 0;
+
+        }
+
+        /*不確定要不要*/
+
+        @media screen and (max-width: 768px) {
+            article>figure {
+                width: 360px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .float-right {
+                float: left;
+                width: 240px;
+                margin-top: 40px;
+                margin-right: 40px;
+                margin-bottom: 50px;
+            }
         }
 
         @media screen and (min-width: 768px) and (max-width: 1023px) {
@@ -104,6 +136,8 @@
             }
         }
 
+
+
         article>p,
         article>h2,
         article>blockquote,
@@ -114,15 +148,24 @@
             margin: 0 auto;
         }
 
+        @media screen and (max-width: 768px) {
+            article>p,
+            article>h2,
+            article>blockquote,
+            article>ul,
+            article figcaption,
+            article>div {
+                width: 350px;
+            }
+        }
+
         @media screen and (min-width: 768px) and (max-width: 1023px) {
             article>p,
             article>h2,
             article>blockquote,
             article>ul,
             article figcaption,
-            article>div,
-            article>header,
-            article>ul {
+            article>div {
                 width: 550px;
             }
         }
@@ -133,11 +176,7 @@
             article>blockquote,
             article>ul,
             article figcaption,
-            article>div,
-            article>header {
-                max-width: 756px;
-            }
-            article>ul {
+            article>div {
                 width: 700px;
             }
         }
@@ -160,8 +199,8 @@
 
         article>blockquote {
             padding-left: 21px;
-            color: #6d6d6d;
-            border-left: 1px solid #6d6d6d;
+            color: #504e4b;
+            border-left: 2px solid #504e4b;
         }
 
         article>h2 {
@@ -200,13 +239,7 @@
             line-height: 2.25;
         }
 
-        .introduction {
-            font-size: 22px;
-            line-height: 1.82;
-            letter-spacing: 1.6px;
-            text-align: justify;
-            margin-top: 30px;
-        }
+        /*延伸閱讀*/
 
         .related-text {
             font-size: 16px;
@@ -296,7 +329,7 @@
         .fb {
             position: absolute;
             left: 880px;
-            top: 67px;
+            top: 70px;
 
         }
 
@@ -313,10 +346,102 @@
         .ig {
             position: absolute;
             left: 880px;
-            top: 167px;
+            top: 170px;
 
         }
 
+/*footer的響應式（平板和桌機）還沒做完 */
+@media screen and (max-width: 768px) {
+    .footer-background {
+            position: relative;
+            height: 135px
+        }
+    
+    .surprise-position {
+            position: absolute;
+            left: 50px;
+            top: 35px;
+            width:5px
+
+        }
+
+        .contact-me {
+            position: absolute;
+            left: 70px;
+            top: 40px;
+            font-size:10px
+
+        }
+
+        .q-position {
+            position: absolute;
+            left: 47px;
+            top: 75px;
+            width:15px
+        }
+
+        .about-me {
+            position: absolute;
+            left: 70px;
+            top: 80px;
+            font-size:10px
+
+        }
+
+
+        .footer-line-position {
+            position: absolute;
+            left: 185px;
+            top: 25px;
+            height:84px
+           
+        }
+
+        .fb-position {
+            position: absolute;
+            left: 235px;
+            top: 35px;
+            width:33px;
+           
+        }
+
+        .fb {
+            position: absolute;
+            left: 280px;
+            top: 44px;
+            font-size:10px
+
+        }
+
+
+
+
+        .ig-position {
+            position: absolute;
+            left: 235px;
+            top: 73px;
+            width:33px
+           
+        }
+
+        .ig {
+            position: absolute;
+            left: 280px;
+            top: 83px;
+            font-size:10px
+        }
+
+            
+        }
+
+
+        @media screen and (min-width: 768px) and (max-width: 1023px) {
+            
+        }
+
+        @media screen and (min-width: 1024px) {
+            
+        }
 
 
 
@@ -444,7 +569,8 @@
             <div style="margin-top:50px;margin-bottom:15px">
 
 
-                <span class="author" style="font-weight: bold;">文／</span><a>周瑩慈、陳亭蓉、劉祐齊、曾智怡、陳詩妤綜合報導</a>
+                <span class="author" style="font-weight: bold;">文／</span>
+                <a>周瑩慈、陳亭蓉、劉祐齊、曾智怡、陳詩妤綜合報導</a>
 
             </div>
 
@@ -480,6 +606,10 @@
             <h2>
                 公辦公營起步難 凝聚共識為首要
             </h2>
+
+            <blockquote>
+                作為改革的先鋒，無前例可循，在執行過程中有許多困難需要克服，首要之務為凝聚各方共識。
+            </blockquote>
             <p>
                 實驗教育批判現行教育體制的問題，重視學生自我認識、自主學習的能力。教學的設計以孩子本身為核心，力求完整課程規劃，讓孩子在成長的過程中充分受尊重。每間實驗學校都有一套自己的課程規劃，並不侷限於現行的體制框架中。公辦公營實驗學校皆是從現有公立學校轉型而成。作為改革的先鋒，無前例可循，在執行過程中有許多困難需要克服，首要之務為凝聚各方共識。
             </p>
@@ -535,7 +665,7 @@
                 從「政府與學校的溝通」到「親師生三方的共識」，每個環節都考驗著參與在其中的人，實驗教育不只需要關注及讚揚，更需要檢討及改進。如此一來，實驗教育才可能成為教育制度的領頭羊，開創台灣教育的新篇章。
             </p>
 
-            <!--為何字體不會變粗，是因為最上面body的設定嗎-->
+           
             <div class="related-text" style="margin-top:40px;margin-bottom:20px;font-weight:900">延伸閱讀</div>
 
             <ul class="related-items" style="padding-bottom:40px">
